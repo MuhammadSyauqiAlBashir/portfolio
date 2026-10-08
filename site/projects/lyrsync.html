@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>lyrsync · Muhammad Syauqi Al Bashir</title>
+<meta name="description" content="Hear a song, follow its lyrics in sync on your phone.">
+<meta name="author" content="Muhammad Syauqi Al Bashir">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://syauqi.bashir.my.id/projects/lyrsync.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="lyrsync · Muhammad Syauqi Al Bashir">
+<meta property="og:description" content="Hear a song, follow its lyrics in sync on your phone.">
+<meta property="og:url" content="https://syauqi.bashir.my.id/projects/lyrsync.html">
+<meta property="og:image" content="https://syauqi.bashir.my.id/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css?v=5ca17b1867">
+<link rel="stylesheet" href="../assets/css/accents.css?v=5ca17b1867">
+<script src="../assets/js/theme.js?v=5ca17b1867"></script>
+<script type="module" src="../assets/js/main.js?v=5ca17b1867"></script>
+</head>
+<body data-p="lyrsync">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../index.html" aria-label="Home"><span class="mono sm" aria-hidden="true">SB</span><span>Muhammad Syauqi Al Bashir</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#work">Work</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme" type="button" aria-label="Switch light or dark theme"><svg class="i sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
+  </div>
+</header>
+<main id="main">
+
+<section class="p-hero wrap">
+  <a class="back" href="../index.html#projects"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All projects</a>
+  <div class="p-top">
+    <div>
+      <p class="eyebrow">Case study</p>
+      <h1>lyrsync</h1>
+      <p class="lede">Hear a song, follow its lyrics in sync on your phone.</p>
+      <ul class="chips"><li class="chip">Python</li><li class="chip">FastAPI</li><li class="chip">Web Audio (AudioWorklet)</li><li class="chip">Shazam (shazamio)</li><li class="chip">LRCLIB</li><li class="chip">PocketBase</li><li class="chip">PWA</li></ul>
+      <div class="lives"><a class="live private" href="https://lyrsync.bashir.my.id" rel="noopener" target="_blank"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span><b>lyrsync.bashir.my.id</b><small>Private · login required</small></span></a></div>
+    </div>
+    <div class="p-cover"><div class="frame phone"><video class="m" poster="../assets/media/lyr-loop.webp" muted loop playsinline preload="none" data-autoplay aria-label="lyrsync screenshot"><source src="../assets/media/lyr-loop.mp4" type="video/mp4"><source src="../assets/media/lyr-loop.webm" type="video/webm"></video></div></div>
+  </div>
+</section>
+
+<section class="wrap sec p-grid">
+  <div class="reveal"><h2>The problem</h2><p>Lyrics apps follow your own player, not the song playing in a café or a car. I wanted one tap: listen, recognise, scroll the lyrics in time.</p></div>
+  <div class="reveal"><h2>What I built</h2><ul class="pts"><li>The browser records the mic and sends a small <b>16 kHz mono WAV</b>; the server identifies it and fetches time-synced lyrics.</li><li>Progressive listening (4 s, then longer clips), automatic retries and <b>server-side rate limiting with back-off</b> so the shared IP never gets throttled.</li><li>"Always" mode, a Resync button, and <b>tap-to-sync</b> for music playing on the same phone (iOS can't share Now Playing with web apps).</li><li>Accounts with admin approval; this app owns the login rules every other app reuses.</li></ul></div>
+</section>
+
+<section class="wrap sec"><h2 class="reveal">Highlights</h2><div class="hls"><figure class="hl reveal"><div class="frame phone"><img class="m" src="../assets/media/lyr-home.webp" alt="Listen or Always: one tap to recognise what&#x27;s playing." loading="lazy" decoding="async" width="600" height="1298"></div><figcaption>Listen or Always: one tap to recognise what&#x27;s playing.</figcaption></figure><figure class="hl reveal"><div class="frame phone"><img class="m" src="../assets/media/lyr-synced.webp" alt="Synced lyrics with the current line highlighted and nudge buttons." loading="lazy" decoding="async" width="600" height="1298"></div><figcaption>Synced lyrics with the current line highlighted and nudge buttons.</figcaption></figure></div></section>
+
+<section class="wrap sec"><section class="demo reveal" aria-label="Try tap-to-sync">
+  <div class="demo-h"><p class="eyebrow">Try it</p><h3>Try tap-to-sync</h3><p>A public-domain song: tap the line you&#x27;re hearing and the lyrics follow from there.</p></div>
+  <div class="demo-body" data-demo="lyrics"><noscript>This demo needs JavaScript.</noscript></div>
+</section></section>
+
+<section class="wrap sec">
+  <h2 class="reveal">How it works</h2>
+  <ol class="flow"><li><span class="n">1</span>Mic (AudioWorklet)</li><li><span class="n">2</span>16 kHz WAV</li><li><span class="n">3</span>Recognise</li><li><span class="n">4</span>Synced lyrics</li><li><span class="n">5</span>Follow / tap-to-sync</li></ol>
+</section>
+
+<section class="wrap sec p-grid">
+  <div class="reveal"><h2>Engineering notes</h2><ul class="pts"><li>Limits per user and per server, plus back-off after a 429, keep an unofficial API usable.</li><li>Shown here with a public-domain song; no copyrighted lyrics are reproduced.</li></ul></div>
+  <div class="reveal"><h2>How I build</h2><p>Designed, built, tested and deployed by me with an AI coding assistant (Claude Code): I set the requirements, review every change, test on scratch copies with fake data, and run it in production.</p></div>
+</section>
+
+
+
+<nav class="wrap pn" aria-label="More projects">
+  <a href="couple-suits.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span><small>Previous</small>Couple Suits</span></a>
+  <a href="jobradar.html"><span><small>Next</small>JobRadar</span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</nav>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 Muhammad Syauqi Al Bashir. Hand-built static site, hosted on my own server. No trackers, no cookies.</p>
+    <p><a href="https://github.com/MuhammadSyauqiAlBashir/portfolio" rel="noopener" target="_blank">Source on GitHub</a> · <a href="../index.html#contact">Contact</a></p>
+  </div>
+</footer>
+</body>
+</html>

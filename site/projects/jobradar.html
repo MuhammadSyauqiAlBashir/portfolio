@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JobRadar · Muhammad Syauqi Al Bashir</title>
+<meta name="description" content="A personal job radar: collects openings, scores them against my profile, drafts honest applications. Nothing is sent without a click.">
+<meta name="author" content="Muhammad Syauqi Al Bashir">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://syauqi.bashir.my.id/projects/jobradar.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JobRadar · Muhammad Syauqi Al Bashir">
+<meta property="og:description" content="A personal job radar: collects openings, scores them against my profile, drafts honest applications. Nothing is sent without a click.">
+<meta property="og:url" content="https://syauqi.bashir.my.id/projects/jobradar.html">
+<meta property="og:image" content="https://syauqi.bashir.my.id/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css?v=5ca17b1867">
+<link rel="stylesheet" href="../assets/css/accents.css?v=5ca17b1867">
+<script src="../assets/js/theme.js?v=5ca17b1867"></script>
+<script type="module" src="../assets/js/main.js?v=5ca17b1867"></script>
+</head>
+<body data-p="jobradar">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../index.html" aria-label="Home"><span class="mono sm" aria-hidden="true">SB</span><span>Muhammad Syauqi Al Bashir</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#work">Work</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme" type="button" aria-label="Switch light or dark theme"><svg class="i sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
+  </div>
+</header>
+<main id="main">
+
+<section class="p-hero wrap">
+  <a class="back" href="../index.html#projects"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All projects</a>
+  <div class="p-top">
+    <div>
+      <p class="eyebrow">Case study</p>
+      <h1>JobRadar</h1>
+      <p class="lede">A personal job radar: collects openings, scores them against my profile, drafts honest applications. Nothing is sent without a click.</p>
+      <ul class="chips"><li class="chip">Python</li><li class="chip">FastAPI</li><li class="chip">SQLite</li><li class="chip">Gemini</li><li class="chip">Google Apps Script</li><li class="chip">Web Push</li><li class="chip">PWA</li></ul>
+      <div class="lives"><a class="live private" href="https://jobs.bashir.my.id" rel="noopener" target="_blank"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span><b>jobs.bashir.my.id</b><small>Private · login required</small></span></a></div>
+    </div>
+    <div class="p-cover"><div class="frame phone"><img class="m" src="../assets/media/jr-inbox.webp" alt="JobRadar screenshot" loading="eager" decoding="async" width="600" height="1298"></div></div>
+  </div>
+</section>
+
+<section class="wrap sec p-grid">
+  <div class="reveal"><h2>The problem</h2><p>Job hunting across many boards is noisy. I wanted one inbox of relevant roles, scored honestly, with drafts that only use true facts about me.</p></div>
+  <div class="reveal"><h2>What I built</h2><ul class="pts"><li>Collectors for public feeds and APIs plus my own alert emails (via Apps Script), with dedupe and free rule-based filters before any AI call.</li><li><b>Batched AI scoring</b> (lite models first, per-model quota rests) with an explainable score: skills, seniority, pay, eligibility, preferences.</li><li>Drafts and tailored CVs built only from a source-of-truth profile, with honesty checks; sending goes through Gmail on approval only.</li><li>Pipeline stages, follow-ups, interview prep and stats; works on phone and desktop.</li></ul></div>
+</section>
+
+<section class="wrap sec"><h2 class="reveal">Highlights</h2><div class="hls"><figure class="hl reveal"><div class="frame phone"><img class="m" src="../assets/media/jr-inbox.webp" alt="Inbox: strong matches first, with the reason for every score." loading="lazy" decoding="async" width="600" height="1298"></div><figcaption>Inbox: strong matches first, with the reason for every score.</figcaption></figure><figure class="hl reveal"><div class="frame phone"><img class="m" src="../assets/media/jr-job.webp" alt="Job detail: the score broken down, then drafts you approve." loading="lazy" decoding="async" width="600" height="1298"></div><figcaption>Job detail: the score broken down, then drafts you approve.</figcaption></figure><figure class="hl reveal"><div class="frame desktop"><img class="m" src="../assets/media/jr-desktop.webp" alt="Desktop layout of the same app." loading="lazy" decoding="async" width="1200" height="750"></div><figcaption>Desktop layout of the same app.</figcaption></figure></div></section>
+
+<section class="wrap sec"><section class="demo reveal" aria-label="Re-weight the score">
+  <div class="demo-h"><p class="eyebrow">Try it</p><h3>Re-weight the score</h3><p>Move the weights and watch three sample jobs re-score, the way JobRadar explains its numbers.</p></div>
+  <div class="demo-body" data-demo="score"><noscript>This demo needs JavaScript.</noscript></div>
+</section></section>
+
+<section class="wrap sec">
+  <h2 class="reveal">How it works</h2>
+  <ol class="flow"><li><span class="n">1</span>Feeds + alert emails</li><li><span class="n">2</span>Dedupe + free filters</li><li><span class="n">3</span>Batched AI scoring</li><li><span class="n">4</span>Inbox</li><li><span class="n">5</span>Approved drafts</li><li><span class="n">6</span>Gmail send</li></ol>
+</section>
+
+<section class="wrap sec p-grid">
+  <div class="reveal"><h2>Engineering notes</h2><ul class="pts"><li>Respects each site&#x27;s terms: official APIs, RSS and my own alert emails only; no scraping.</li><li>Still in progress; built and deployed in its first two days.</li></ul></div>
+  <div class="reveal"><h2>How I build</h2><p>Designed, built, tested and deployed by me with an AI coding assistant (Claude Code): I set the requirements, review every change, test on scratch copies with fake data, and run it in production.</p></div>
+</section>
+
+
+
+<nav class="wrap pn" aria-label="More projects">
+  <a href="lyrsync.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span><small>Previous</small>lyrsync</span></a>
+  <a href="platform.html"><span><small>Next</small>The platform</span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</nav>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 Muhammad Syauqi Al Bashir. Hand-built static site, hosted on my own server. No trackers, no cookies.</p>
+    <p><a href="https://github.com/MuhammadSyauqiAlBashir/portfolio" rel="noopener" target="_blank">Source on GitHub</a> · <a href="../index.html#contact">Contact</a></p>
+  </div>
+</footer>
+</body>
+</html>

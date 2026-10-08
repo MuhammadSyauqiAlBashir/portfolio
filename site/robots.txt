@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://syauqi.bashir.my.id/sitemap.xml

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The platform · Muhammad Syauqi Al Bashir</title>
+<meta name="description" content="Six apps on one 2 GB server: hardened, sandboxed, monitored and backed up every night.">
+<meta name="author" content="Muhammad Syauqi Al Bashir">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1012" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://syauqi.bashir.my.id/projects/platform.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The platform · Muhammad Syauqi Al Bashir">
+<meta property="og:description" content="Six apps on one 2 GB server: hardened, sandboxed, monitored and backed up every night.">
+<meta property="og:url" content="https://syauqi.bashir.my.id/projects/platform.html">
+<meta property="og:image" content="https://syauqi.bashir.my.id/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/site.css?v=5ca17b1867">
+<link rel="stylesheet" href="../assets/css/accents.css?v=5ca17b1867">
+<script src="../assets/js/theme.js?v=5ca17b1867"></script>
+<script type="module" src="../assets/js/main.js?v=5ca17b1867"></script>
+</head>
+<body data-p="platform">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="../index.html" aria-label="Home"><span class="mono sm" aria-hidden="true">SB</span><span>Muhammad Syauqi Al Bashir</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="../index.html#work">Work</a><a href="../index.html#projects">Projects</a><a href="../index.html#skills">Skills</a><a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="theme" type="button" aria-label="Switch light or dark theme"><svg class="i sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></button>
+  </div>
+</header>
+<main id="main">
+
+<section class="p-hero wrap">
+  <a class="back" href="../index.html#projects"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>All projects</a>
+  <div class="p-top">
+    <div>
+      <p class="eyebrow">Case study</p>
+      <h1>The platform</h1>
+      <p class="lede">Six apps on one 2 GB server: hardened, sandboxed, monitored and backed up every night.</p>
+      <ul class="chips"><li class="chip">Ubuntu 24.04</li><li class="chip">Caddy (HTTP/3)</li><li class="chip">systemd sandboxing</li><li class="chip">PocketBase</li><li class="chip">ufw + fail2ban</li><li class="chip">SSH key + TOTP</li><li class="chip">Let&#x27;s Encrypt</li></ul>
+      <div class="lives"></div>
+    </div>
+    <div class="p-cover"><div class="frame svgf"><svg class="diagram" viewBox="0 0 600 360" role="img" aria-label="Server architecture diagram">
+  <rect x="200" y="14" width="200" height="40" rx="20" class="d-pill"/><text x="300" y="39" class="d-t" text-anchor="middle">Internet · HTTPS / HTTP3</text>
+  <path d="M300 54v22" class="d-line"/>
+  <rect x="24" y="76" width="552" height="60" rx="12" class="d-acc"/>
+  <text x="300" y="101" class="d-h" text-anchor="middle">Firewall (cloud + ufw) · Caddy reverse proxy</text>
+  <text x="300" y="121" class="d-s" text-anchor="middle">TLS by Let's Encrypt · strict security headers per site · SSH: key + TOTP</text>
+  <path d="M300 136v14" class="d-line"/>
+  <text x="24" y="166" class="d-s">Each app: own Linux user · sandboxed systemd unit · memory/CPU caps · localhost only</text>
+  <rect x="24" y="176" width="126" height="44" rx="10" class="d-box"/><text x="87" y="203" class="d-t" text-anchor="middle">Finance</text><rect x="162" y="176" width="126" height="44" rx="10" class="d-box"/><text x="225" y="203" class="d-t" text-anchor="middle">lyrsync</text><rect x="300" y="176" width="126" height="44" rx="10" class="d-box"/><text x="363" y="203" class="d-t" text-anchor="middle">Shop</text><rect x="438" y="176" width="126" height="44" rx="10" class="d-box"/><text x="501" y="203" class="d-t" text-anchor="middle">Shop admin</text><rect x="24" y="234" width="126" height="44" rx="10" class="d-box"/><text x="87" y="261" class="d-t" text-anchor="middle">BashGames</text><rect x="162" y="234" width="126" height="44" rx="10" class="d-box"/><text x="225" y="261" class="d-t" text-anchor="middle">Clip Studio</text><rect x="300" y="234" width="126" height="44" rx="10" class="d-box"/><text x="363" y="261" class="d-t" text-anchor="middle">JobRadar</text>
+  <rect x="24" y="300" width="270" height="44" rx="10" class="d-box2"/><text x="159" y="327" class="d-t" text-anchor="middle">Shared login + PocketBase</text>
+  <rect x="306" y="300" width="270" height="44" rx="10" class="d-box2"/><text x="441" y="327" class="d-t" text-anchor="middle">Nightly verified backups → Drive</text>
+</svg></div></div>
+  </div>
+</section>
+
+<section class="wrap sec p-grid">
+  <div class="reveal"><h2>The problem</h2><p>Running real apps (one with real money data) on a budget server means security, isolation and recovery have to be designed in, not bolted on.</p></div>
+  <div class="reveal"><h2>What I built</h2><ul class="pts"><li><b>Layered security:</b> provider firewall + ufw, SSH with key + TOTP and no passwords, fail2ban, unattended security updates, hardened kernel settings, strict HTTPS headers per site.</li><li>Each app runs as its <b>own Linux user</b> in a sandboxed systemd unit with memory and CPU caps, listening only on localhost behind Caddy.</li><li>Secrets in root-owned env files readable only by their app; never in git.</li><li><b>Nightly verified backups</b> of the shared database to Google Drive, plus per-app backups; restore tested.</li><li>One login system shared by every app, with admin approval for new accounts; a separate free AI project per app so quotas never collide.</li></ul></div>
+</section>
+
+
+
+
+
+<section class="wrap sec">
+  <h2 class="reveal">How it works</h2>
+  <ol class="flow"><li><span class="n">1</span>Internet (HTTPS, HTTP/3)</li><li><span class="n">2</span>Caddy + strict headers</li><li><span class="n">3</span>Sandboxed app services</li><li><span class="n">4</span>Shared auth + DB</li><li><span class="n">5</span>Nightly backups</li></ol>
+</section>
+
+<section class="wrap sec p-grid">
+  <div class="reveal"><h2>Engineering notes</h2><ul class="pts"><li>Budget rule: free tiers that need no credit card, one small VPS, unlimited traffic.</li><li>Each project writes a short server-footprint brief so every new app knows what already runs.</li></ul></div>
+  <div class="reveal"><h2>How I build</h2><p>Designed, built, tested and deployed by me with an AI coding assistant (Claude Code): I set the requirements, review every change, test on scratch copies with fake data, and run it in production.</p></div>
+</section>
+
+
+
+<nav class="wrap pn" aria-label="More projects">
+  <a href="jobradar.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span><small>Previous</small>JobRadar</span></a>
+  <a href="monotaro.html"><span><small>Next</small>Work at Monotaro</span><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</nav>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 Muhammad Syauqi Al Bashir. Hand-built static site, hosted on my own server. No trackers, no cookies.</p>
+    <p><a href="https://github.com/MuhammadSyauqiAlBashir/portfolio" rel="noopener" target="_blank">Source on GitHub</a> · <a href="../index.html#contact">Contact</a></p>
+  </div>
+</footer>
+</body>
+</html>

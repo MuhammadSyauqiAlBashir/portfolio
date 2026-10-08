@@ -1,0 +1,26 @@
+# Portfolio: static site from /srv/portfolio (deployed by deploy/deploy.sh). Public, indexable, no backend.
+syauqi.bashir.my.id {
+	import security
+	encode zstd gzip
+
+	header {
+		Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+		Permissions-Policy "microphone=(self), camera=(), accelerometer=(), gyroscope=(), magnetometer=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+		Cross-Origin-Resource-Policy "same-origin"
+	}
+
+	root * /srv/portfolio
+	@versioned path /assets/css/* /assets/js/*
+	@media path /assets/media/* /assets/img/* /assets/cv/* /assets/*.png /assets/*.svg
+	@pages not path /assets/*
+	header @versioned Cache-Control "public, max-age=2592000"
+	header @media Cache-Control "public, max-age=86400"
+	header @pages Cache-Control "no-cache"
+	file_server
+
+	handle_errors {
+		@404 expression {err.status_code} == 404
+		rewrite @404 /404.html
+		file_server
+	}
+}
