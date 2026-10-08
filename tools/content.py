@@ -81,7 +81,7 @@ PROJECTS = [
         "tagline": "Long videos in, captioned vertical clips out. An AI picks the moments; a human approves every clip.",
         "stack": ["Python", "FastAPI", "FFmpeg", "Groq Whisper", "Gemini", "YuNet", "SQLite", "PWA"],
         "links": [("https://clips.bashir.my.id", PRIVATE)],
-        "cover": "clip-loop", "cover_kind": "phone",
+        "cover": "clip-loop", "cover_kind": "reel",
         "problem": "Turning hours of podcasts and streams into good short clips is slow manual work: find the moment, cut it, reframe it to 9:16, caption it, post it everywhere, and only use sources that allow it.",
         "built": [
             "Paste a link, upload a file, or let <b>watchers</b> follow YouTube channels (WebSub push + RSS + Data API), Twitch (EventSub) and Kick, including <b>live-stream recording</b>.",
@@ -93,7 +93,7 @@ PROJECTS = [
         ],
         "highlights": [
             ("clip-review", "phone", "Review queue: score, length, loudness, laughter, music and face-layout checks on every clip, grouped by source video."),
-            ("clip-loop", "phone", "The finished clip: a face-tracked split layout and word-by-word karaoke captions, cut on sentence boundaries."),
+            ("clip-loop", "reel", "The finished clip: a face-tracked split layout and word-by-word karaoke captions, cut on sentence boundaries."),
             ("clip-ready", "phone", "Ready to post: approved clips with their render and posting queue, each pausable, with plain-language status."),
         ],
         "demo": ("clippipe", "Watch the pipeline", "A synthetic walk-through of what happens to one video: transcript, loudness, the chosen moment, the face crop and the captions."),
@@ -110,7 +110,7 @@ PROJECTS = [
         "tagline": "A real-time multiplayer party platform for family and friends: 69 games over WebSocket.",
         "stack": ["Python", "FastAPI", "WebSocket", "PocketBase", "three.js", "Web Audio", "Gemini", "PWA"],
         "links": [("https://games.bashir.my.id", PRIVATE)],
-        "cover": "bg-lobby", "cover_kind": "phone",
+        "cover": "bg-ludo-loop", "cover_kind": "phone",
         "problem": "Our family and friends wanted to play together on their phones: classic board and card games, quick party games and silly AI-judged contests, without ads or app stores.",
         "built": [
             "<b>Server-authoritative engines</b> for every game: state kept as JSON, its own RNG, a separate view per player so hidden cards stay hidden.",
@@ -178,7 +178,7 @@ PROJECTS = [
             ("cs-home", "phone", "Storefront home: bilingual, SEO-ready, installable."),
             ("cs-builder", "phone", "Family set builder: choose who's wearing it, the cut and each size."),
             ("csa-products", "desktop", "Admin: products, stock and the demo catalog generated with AI photos."),
-            ("csa-studio", "desktop", "AI studio output: options, flats, family board and tech pack."),
+            ("csa-studio", "wide", "AI studio output: the family board, every member drawn from the same flat sketch and fabric details."),
         ],
         "demo": ("familyset", "Build a family set", "Pick roles and sizes; the family-set discount kicks in at 3 and 5 people, as in the shop."),
         "flow": ["Sketch + details", "Gemini brief", "FLUX options", "Flats + family board", "Tech pack + size charts", "Draft product"],

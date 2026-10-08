@@ -105,8 +105,12 @@ export function mount(node) {
     }
     if (phase >= 4 && cur >= 0) {                     // karaoke captions: 3-word groups, current word highlighted
       const g0 = cur - (cur % 3), group = SCRIPT.slice(g0, g0 + 3)
-      og.font = "800 17px system-ui, sans-serif"; og.textAlign = "left"; og.textBaseline = "middle"; og.lineJoin = "round"
+      og.textAlign = "left"; og.textBaseline = "middle"; og.lineJoin = "round"
       const texts = group.map(([, w]) => w.toUpperCase())
+      let fs = 17
+      og.font = `800 ${fs}px system-ui, sans-serif`
+      const full = og.measureText(texts.join(" ")).width
+      if (full > OW - 20) { fs = Math.floor(fs * (OW - 20) / full); og.font = `800 ${fs}px system-ui, sans-serif` }   // keep the line inside the frame
       const widths = texts.map((s) => og.measureText(s + " ").width)
       let x = (OW - widths.reduce((a, b) => a + b, 0)) / 2
       texts.forEach((s, i) => {
