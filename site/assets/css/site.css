@@ -70,7 +70,7 @@ button { font: inherit; color: inherit; }
 .mono { display: inline-grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--bg); font-family: var(--serif); font-weight: 600; letter-spacing: .02em; flex: none; }
 .mono.sm { width: 32px; height: 32px; font-size: .8rem; }
 .mono.lg { width: min(280px, 62vw); aspect-ratio: 1; font-size: clamp(3rem, 9vw, 5.4rem); background: linear-gradient(150deg, var(--accent), color-mix(in srgb, var(--accent) 55%, var(--ink))); color: var(--accent-ink); box-shadow: var(--shadow-lg); }
-.photo { width: min(300px, 64vw); aspect-ratio: 1; object-fit: cover; border-radius: 50%; box-shadow: var(--shadow-lg); }
+.photo { width: min(300px, 64vw); height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 50%; box-shadow: var(--shadow-lg); }
 
 /* hero */
 .hero { display: grid; grid-template-columns: 1.35fr .65fr; gap: 48px; align-items: center; padding-top: clamp(40px, 8vw, 96px); padding-bottom: 40px; }
