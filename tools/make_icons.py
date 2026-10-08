@@ -29,8 +29,14 @@ W, H = 1200, 630
 og = Image.new("RGB", (W, H), PAPER)
 d = ImageDraw.Draw(og)
 d.rectangle([0, 0, 18, H], fill=NAVY)
-d.ellipse([90, 90, 250, 250], fill=NAVY)
-d.text((170, 172), "SB", font=ImageFont.truetype(SERIF, 70), fill="white", anchor="mm")
+photo = A / "img" / "photo.webp"
+if photo.exists():  # the owner's photo in a circle; the SB monogram until then
+    ph = Image.open(photo).convert("RGB").resize((160, 160), Image.LANCZOS)
+    mask = Image.new("L", (640, 640), 0); ImageDraw.Draw(mask).ellipse((0, 0, 639, 639), fill=255)
+    og.paste(ph, (90, 90), mask.resize((160, 160), Image.LANCZOS))
+else:
+    d.ellipse([90, 90, 250, 250], fill=NAVY)
+    d.text((170, 172), "SB", font=ImageFont.truetype(SERIF, 70), fill="white", anchor="mm")
 d.text((90, 300), "Muhammad Syauqi Al Bashir", font=ImageFont.truetype(SERIF, 72), fill=INK)
 d.text((92, 395), "DATA & INTEGRATION ENGINEER · GOOGLE CLOUD", font=ImageFont.truetype(SANS, 28), fill=NAVY)
 d.text((92, 460), "Daily data syncs and ERP / e-commerce integrations at Monotaro Indonesia,", font=ImageFont.truetype(SERIF_R, 32), fill=(70, 72, 80))
