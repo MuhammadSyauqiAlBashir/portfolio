@@ -33,8 +33,15 @@ git-ignored `CLAUDE.local.md`. **This repo is PUBLIC: never commit anything priv
 | `deploy/` | `Caddyfile.portfolio`, `deploy.sh` |
 
 Media naming: a project's `cover` / `highlights` refer to names in `site/assets/media`; an `.mp4` next to a `.webp`
-turns the still into a muted loop (with the WebP as poster). Phone shots 390×844 @2x saved at 600 px wide; desktop
-1440×900 at 1200 px.
+turns the still into a muted loop (with the WebP as poster). Frame kinds: `phone` (390:844), `reel` (9:16, Clip
+Studio output), `desktop` (1440:900), `wide` (own ratio), `svg`. A highlight equal to the page cover is skipped.
+Media URLs carry `?v=<content hash>` (cached 1 day), so re-recorded files always reach browsers.
+Phone shots 390×844 @2x saved at 600 px wide; desktop 1440×900 at 1200 px.
+
+**Recording loops:** never use Playwright `record_video` for @2x phones: it records CSS pixels into the corner of
+the canvas (grey area, blurry; this shipped once and was caught by the owner on 2026-10-08). Use the CDP screencast
+helper (`Screencast` in the private capture scripts), which grabs device-pixel frames. After any media change, run
+the audit (every `.frame` on every page, desktop + phone) and look at the sheets before deploying.
 
 ## Mini-demos (`site/assets/js/demos/`)
 

@@ -61,6 +61,11 @@ def icon(name: str, cls: str = "i") -> str:
             f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
 
 
+def mv(name: str, ext: str) -> str:
+    """?v=<content hash> so a re-recorded image/video never comes from an old browser cache."""
+    return hashlib.sha256((MEDIA / f"{name}.{ext}").read_bytes()).hexdigest()[:8]
+
+
 def has(name: str, ext: str) -> bool:
     return (MEDIA / f"{name}.{ext}").exists()
 
@@ -70,13 +75,13 @@ def media(name: str, kind: str, alt: str, rel: str, eager: bool = False) -> str:
     load = "eager" if eager else "lazy"
     src = f"{rel}assets/media/{name}"
     if has(name, "mp4"):
-        poster = f' poster="{src}.webp"' if has(name, "webp") else ""
-        webm = f'<source src="{src}.webm" type="video/webm">' if has(name, "webm") else ""
-        inner = (f'<video class="m"{poster} muted loop playsinline preload="none" data-autoplay aria-label="{e(alt)}">'
-                 f'<source src="{src}.mp4" type="video/mp4">{webm}</video>')
+        poster = f' poster="{src}.webp?v={mv(name, "webp")}"' if has(name, "webp") else ""
+        webm = f'<source src="{src}.webm?v={mv(name, "webm")}" type="video/webm">' if has(name, "webm") else ""
+        inner = (f'<video class="m"{poster} muted loop playsinline disableremoteplayback disablepictureinpicture preload="none" data-autoplay aria-label="{e(alt)}">'
+                 f'<source src="{src}.mp4?v={mv(name, "mp4")}" type="video/mp4">{webm}</video>')
     elif has(name, "webp"):
         w, h = dims(name)
-        inner = f'<img class="m" src="{src}.webp" alt="{e(alt)}" loading="{load}" decoding="async" width="{w}" height="{h}">'
+        inner = f'<img class="m" src="{src}.webp?v={mv(name, "webp")}" alt="{e(alt)}" loading="{load}" decoding="async" width="{w}" height="{h}">'
     else:
         inner = f'<div class="m ph" role="img" aria-label="{e(alt)}"><span>{e(alt)}</span></div>'
     return f'<div class="frame {kind}">{inner}</div>'
@@ -332,7 +337,7 @@ def project(p, i) -> str:
     built = "".join(f"<li>{b}</li>" for b in p["built"])
     notes = "".join(f"<li>{e(n)}</li>" for n in p["notes"])
     hl = "".join(f'<figure class="hl reveal">{media(n, k, cap, rel)}<figcaption>{e(cap)}</figcaption></figure>'
-                 for n, k, cap in p["highlights"])
+                 for n, k, cap in p["highlights"] if n != p["cover"])  # the cover is already at the top
     demos = ""
     if p["demo"]:
         demos += demo_block(p["demo"])

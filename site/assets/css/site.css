@@ -114,8 +114,9 @@ button { font: inherit; color: inherit; }
 .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; color: inherit; text-decoration: none; box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s, border-color .25s; }
 .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: color-mix(in srgb, var(--pa) 40%, var(--line)); }
 .card:hover .more .i { transform: translateX(3px); }
-.card .shot { height: 300px; background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--pa) 22%, var(--surface2)), var(--surface2)); display: flex; align-items: flex-end; justify-content: center; padding: 28px 24px 0; overflow: hidden; }
-.card .shot .frame.phone { width: 200px; margin-bottom: -150px; }
+.card .shot { height: 400px; background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--pa) 22%, var(--surface2)), var(--surface2)); display: flex; align-items: center; justify-content: center; padding: 22px 24px; overflow: hidden; }
+.card .shot .frame.phone { width: 164px; }
+.card .shot .frame.reel { width: 198px; }
 .card .shot .frame.desktop, .card .shot .frame.wide { width: 100%; margin-bottom: -40px; }
 .card .shot:has(.svgf) { align-items: center; padding: 18px; }
 .card .shot .frame.svgf { width: 100%; align-self: center; margin-bottom: 0; background: transparent; box-shadow: none; border: 0; }
@@ -131,6 +132,8 @@ button { font: inherit; color: inherit; }
 .frame .m { width: 100%; height: auto; }
 .frame.phone { border-radius: 30px; padding: 7px; background: #111; box-shadow: var(--shadow-lg); }
 .frame.phone .m { border-radius: 24px; aspect-ratio: 390 / 844; object-fit: cover; object-position: top; background: #222; }
+.frame.reel { border-radius: 26px; padding: 6px; background: #111; box-shadow: var(--shadow-lg); }
+.frame.reel .m { border-radius: 20px; aspect-ratio: 9 / 16; object-fit: cover; background: #222; }
 .frame.desktop, .frame.wide { border-radius: 12px; border: 1px solid var(--line); box-shadow: var(--shadow-lg); overflow: hidden; padding-top: 26px; background: var(--surface2); }
 .frame.desktop::before, .frame.wide::before { content: ""; position: absolute; left: 12px; top: 9px; width: 8px; height: 8px; border-radius: 50%; background: #e5534b; box-shadow: 14px 0 0 #e8b84a, 28px 0 0 #57b26a; }
 .frame.desktop .m { aspect-ratio: 1440 / 900; object-fit: cover; object-position: top; }
@@ -184,6 +187,7 @@ video.m { background: #111; }
 .p-top .chips { margin: 4px 0 22px; }
 .p-cover { display: flex; justify-content: center; padding: 28px; border-radius: 28px; background: radial-gradient(110% 80% at 50% 0%, color-mix(in srgb, var(--pa) 26%, var(--surface2)), var(--surface2)); }
 .p-cover .frame.phone { width: min(290px, 70vw); }
+.p-cover .frame.reel { width: min(330px, 78vw); }
 .p-cover .frame.desktop, .p-cover .frame.wide, .p-cover .frame.svgf { width: 100%; }
 .lives { display: flex; flex-wrap: wrap; gap: 10px; }
 .live { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); text-decoration: none; color: var(--ink); }
@@ -270,8 +274,9 @@ select, input[type="number"], input[type="text"] { font: inherit; font-size: .93
   .grid, .skills, .two, .split, .contact-list { grid-template-columns: 1fr; }
   .two { gap: 8px; }
   .job { grid-template-columns: 1fr; gap: 8px; }
-  .card .shot { height: 250px; }
-  .card .shot .frame.phone { width: 170px; }
+  .card .shot { height: 360px; }
+  .card .shot .frame.phone { width: 146px; }
+  .card .shot .frame.reel { width: 176px; }
   .hls { grid-template-columns: 1fr 1fr; gap: 18px; }
   .hl:has(.desktop), .hl:has(.wide) { grid-column: span 2; }
   .flow { flex-direction: column; gap: 22px; }
@@ -328,7 +333,7 @@ select, input[type="number"], input[type="text"] { font: inherit; font-size: .93
 .km-wrap > .hint { grid-column: 1 / -1; }
 .km { width: 100%; height: auto; touch-action: manipulation; user-select: none; -webkit-user-select: none; }
 .km-bg { fill: #fffdf8; stroke: #e2d6c2; stroke-width: 1.2; }
-.km-sym { pointer-events: none; transform-box: fill-box; transform-origin: center; }
+.km-sym { pointer-events: none; }
 .km-sym.got { animation: kmGot .35s ease-out; }
 .km-hit { fill: transparent; cursor: pointer; }
 .km-wrap.miss { animation: kmMiss .4s; }
